@@ -7,10 +7,10 @@
     <title>TODO List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Project2/TODO.css">
+    <link rel="stylesheet" href="/TODO.css">
 </head>
-    
-<body >
+
+<body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -55,18 +55,31 @@
         <button type="submit" class="btn btn-primary" onclick="Add()">Add to List</button>
     </div>
 
-    <h3 class="text">TO DO LIST</h3>
+    <div class="h3f">
+        <h3 class="text inline-block">TO DO LIST</h3>
+        <div class="dropdown inline-block" id="dd">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id = "ddbtn">
+              Oldest First
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item active" href="#" onclick="alphabetical()">Alphabetical</a></li>
+              <li><a class="dropdown-item" href="#" onclick="oldest()">Oldest First</a></li>
+              <li><a class="dropdown-item" href="#" onclick="newest()">Newest First</a></li>
+            </ul>
+          </div>
+    </div>
 
-    <table class="table width" >
-          <tr>
+
+    <table class="table width">
+        <tr>
             <th class="align">Sno</th>
             <th class="align">Task</th>
             <th class="align">Description</th>
             <th class="align">Delete</th>
-          </tr>
-          <tbody id="tabledata">
-          </tbody>
-      </table>
+        </tr>
+        <tbody id="tabledata">
+        </tbody>
+    </table>
 
 </body>
 
@@ -74,6 +87,6 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-    <script src="/Project2/TODO.js"></script>
+<script src="/TODO.js"></script>
 
 </html>
